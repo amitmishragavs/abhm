@@ -1,0 +1,117 @@
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+.card-container.card {
+  max-width: 350px !important;
+  padding: 40px 40px;
+}
+
+.card {
+  background-color: #f7f7f7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.profile-img-card {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+fieldset.scheduler-border {
+  border: 1px groove #ddd !important;
+  padding: 0 1.4em 1.4em 1.4em !important;
+  margin: 0 0 1.5em 0 !important;
+  -webkit-box-shadow: 0px 0px 0px 0px #000;
+  box-shadow: 0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+  font-size: 1.2em !important;
+  font-weight: bold !important;
+  text-align: left !important;
+  width: auto;
+  padding: 0 10px;
+  border-bottom: none;
+}
+
+.bg-lite {
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 2% 58%, 0% 0%);
+  background-color: #45C0BE;
+
+  .navbar-nav {
+    padding-right: 2rem;
+
+    li {
+      padding-left: 1rem;
+    }
+  }
+
+  padding: 0;
+  padding-top: 5px;
+  margin: 0rem 0 0 9rem;
+
+}
+
+.active-nav {
+  color: #07B3AB !important;
+  background-color: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-weight: bold;
+}
+
+.app-wrapper {
+  position: relative;
+  background-color: rgb(236, 245, 255);
+  height: 100vh;
+
+  .navbar-brand {
+    position: absolute;
+    color: #004084;
+    font-weight: bold;
+    left: 1.6rem;
+    top: 1rem;
+    font-size: 2rem;
+  }
+
+  .navbar-top {
+    margin-left: 9rem;
+    padding: 10px 0;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    padding-right: 2rem;
+
+    svg {
+      vertical-align: baseline;
+    }
+  }
+
+  .container-wrapper {
+    // background-color: #FFFFFF;
+    padding: 0;
+    max-width: 96%;
+    //  margin-top: 1rem;
+  }
+}
+
+.form-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}

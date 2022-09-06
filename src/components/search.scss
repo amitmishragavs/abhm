@@ -1,0 +1,40 @@
+.search-wrapper {
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem
+    }
+
+    // width: 100vw;
+    // height: 100vh;
+    min-height: 60vh;
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    .ant-card-grid {
+        border-radius: 10px;
+    }
+
+    .card {
+        width: 40%;
+        min-height: 50%;
+        text-align: center;
+        background: #fff;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+
+.term-condition {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+        font-size: 1rem;
+    }
+}

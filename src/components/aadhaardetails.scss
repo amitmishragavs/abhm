@@ -1,0 +1,88 @@
+.registration-wrapper-detail {
+    margin-top: 1.6rem;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    background-color: #fff;
+
+    .registration-nav-detail {
+        margin-top: 1.6rem;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        // padding: 1rem;
+        background-color: #004084;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+
+        .tab {
+            display: inline-block;
+            background-color: #fff;
+            margin-top: 5px;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            color: #004084;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    }
+
+    .profile-wrapper {
+        min-height: 60vh;
+        display: flex;
+        // flex-direction: column;
+        padding: 2rem 0;
+
+        .profile-photo {
+            // display: flex;
+            // justify-content: center;
+            min-width: 300px;
+            // border-right: 1px solid rgba(66, 66, 66, 0.3);
+        }
+
+        .profile-detail {
+            table {
+                width: 70%;
+                border-collapse: separate;
+                border-spacing: 0 1.5em;
+            }
+
+            padding: 0 2rem;
+            width: -webkit-fill-available;
+
+            .personal {
+                // // display: flex;
+                // gap: 6rem ;
+                // flex-wrap: wrap;
+
+                .detail {
+
+                    // display: flex;
+                    // flex-direction: column;
+                    b {
+                        font-size: 18px;
+                        opacity: 0.6;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        opacity: 0.8;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+.profile-loader {
+    display: flex;
+    justify-content: center;
+    min-height: 60vh;
+    align-items: center;
+}
+
+.display-gap{
+    display: flex;
+    gap: 1rem;
+}

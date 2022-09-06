@@ -1,0 +1,65 @@
+.registration-wrapper {
+    margin-top: 1.6rem;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    background-color: #fff;
+    // max-width: 96%;
+
+    .registration-nav {
+        background-color: #004084;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        padding: 0 1rem;
+
+        .tab {
+            display: inline-block;
+            background-color: #fff;
+            margin-top: 5px;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            color: #004084;
+            font-weight: bold;
+        }
+    }
+
+    .form-wrapper {
+        padding: 0 1rem;
+        padding-bottom: 1rem;
+
+        input {
+            border: 1px solid #707070;
+            border-radius: 5px;
+        }
+        .form-check{
+            cursor: pointer;
+            .form-check-input{
+                cursor: pointer;
+
+            }
+        }
+        .form-check-label{
+            margin: 0;
+            
+        }
+        label {
+            color: #004084;
+            letter-spacing: 0px;
+            margin-bottom: 0;
+            margin-top: 1rem;
+            font-weight: 500;
+        }
+
+        .aadhaar-section {
+            font-weight: bold;
+            font-size: 18px;
+            padding: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+            .action-btn{
+                display: flex;
+                gap: 10px;
+            }
+        }
+    }
+}

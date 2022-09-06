@@ -1,0 +1,29 @@
+.profile-tab-wrapper {
+    margin-top: 1.6rem;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    background-color: #fff;
+
+    .tabs {
+        margin-top: 1.6rem;
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        // padding: 1rem;
+        background-color: #004084;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        .tab{
+            display: inline-block;
+            background-color: #fff;
+            margin-top: 5px;
+            padding: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            color: #004084;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    }
+
+}

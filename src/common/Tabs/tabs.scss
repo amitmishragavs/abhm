@@ -1,0 +1,12 @@
+.tab-wrapper {
+    .ant-tabs-nav {
+        &::before {
+            border: none !important;
+        }
+    }
+
+    .ant-tabs-nav-list {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
