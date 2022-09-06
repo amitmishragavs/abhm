@@ -14,5 +14,5 @@ export function Input({ show = true, lable = "", ...props }) {
 }
 
 export function Button({ show = true, ...props }) {
-    return show ? <AButton type="primary" style={{ width: "100%" }}  {...props} /> : null
+    return show ? <AButton type="primary"  {...props} className='c-button' /> : null
 }

@@ -1,12 +1,14 @@
 .GCard {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .ant-card-grid {
         padding: 2rem 4rem;
+        min-width: 20rem;
+        max-width: 35rem;
     }
 
     .card {

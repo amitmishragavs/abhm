@@ -80,9 +80,7 @@ class App extends Component<Props, State> {
     return (
       <div className="app-wrapper">
 
-
-
-        {currentUser && (window.location.pathname !== "/" && !window.location.pathname.includes("/login")) ? <HeaderComponent currentUser={currentUser} /> : null}
+        { window.location.pathname!=="/login" ? <HeaderComponent currentUser={currentUser} /> : null}
 
         <div style={{ background: "#ECF5FF" }}>
           <div className="container-wrapper container">
@@ -91,7 +89,7 @@ class App extends Component<Props, State> {
               <Route exact path="/login" component={Login} />
               <Route exact path="/login_abha" component={ABHALogin} />
               <Route exact path="/abha_verification" component={ABHAVerification} />
-              <Route path="/search" component={Search} />
+              <Route path="/register" component={Search} />
               <Route path="/enroll" component={Enroll} />
               <Route path="/abdm_profile" component={AadhaarDetails} />
               <Route path="/abdm_card" component={ABHMCard} />

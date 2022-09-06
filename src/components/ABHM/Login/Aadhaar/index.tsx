@@ -37,10 +37,10 @@ function Aadhaar() {
     const show = Boolean(isRes)
     return (
         <div className='form-gap'>
-            <Input show={!show} onChange={handleChange} name="id" placeholder="Enter Health ID" />
-            <Input show={show} onChange={handleChange} name="otp" placeholder="Enter OTP" />
-            <Button show={!show} onClick={searchHandler} style={{ width: "100%" }} type="primary">Submit</Button>
-            <Button show={show} onClick={otpHandler} style={{ width: "100%" }} type="primary">Submit</Button>
+            <Input lable="Health Id"  show={!show} onChange={handleChange} name="id" placeholder="Enter Health ID" />
+            <Input lable="OTP" show={show} onChange={handleChange} name="otp" placeholder="Enter OTP" />
+            <Button show={!show} onClick={searchHandler}  type="primary">Submit</Button>
+            <Button show={show} onClick={otpHandler}  type="primary">Submit</Button>
         </div>
     )
 }

@@ -85,7 +85,7 @@ export default class Search extends Component<Props, State> {
 
 
   handleCancel() {
-    this.props.history.push("/search");
+    this.props.history.push("/register");
     window.location.reload();
   }
 
@@ -120,24 +120,8 @@ export default class Search extends Component<Props, State> {
         }
       );
     }
-    // Modal.error({
-    //   title:'Patient already exists!!',
-    //   content: <div>
-    //     <h3></h3>
-    //   </div>,
-    //   onCancel: () => {
-    //     this.setState({alreadyExist: true})
-    //   },
-    //   onOk: () => {
-    //     this.props.history.replace("/search");
-    //   },
-    //   okText: 'Go Back',
-    //   mask: false,
-    //   keyboard: false,
-    // })
+  
   }
-
-
 
   handleSubmit() {
     aadharService.saveAadharDetails({...this.state.data,key:String(this.state.registered),aadhaar_number:String(this.state.data.aadhaar_number)}).then(

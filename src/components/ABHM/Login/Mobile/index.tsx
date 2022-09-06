@@ -39,10 +39,10 @@ function Mobile() {
     const isRes = inputs.res ? Object.keys(inputs["res"]).length : 0;
     return (
         <div className='form-gap'>
-            <Input show={!isRes} onChange={handleChange} name="id" placeholder="Enter Health ID" />
-            <Input show={!!isRes} onChange={handleChange} name="otp" placeholder="Enter OTP" />
-            <Button show={Boolean(!isRes)} onClick={searchHandler} style={{ width: "100%" }} type="primary">Submit</Button>
-            <Button show={Boolean(isRes)} onClick={otpHandler} style={{ width: "100%" }} type="primary">Submit</Button>
+            <Input lable="Health Id" show={!isRes} onChange={handleChange} name="id" placeholder="Enter Health ID" />
+            <Input lable="OTP" show={!!isRes} onChange={handleChange} name="otp" placeholder="Enter OTP" />
+            <Button show={Boolean(!isRes)} onClick={searchHandler}  type="primary">Submit</Button>
+            <Button show={Boolean(isRes)} onClick={otpHandler} type="primary">Submit</Button>
         </div>
     )
 }

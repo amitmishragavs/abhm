@@ -49,7 +49,7 @@ export default class Login extends Component<Props, State> {
 
     AuthService.login(username, password).then(
       () => {
-        this.props.history.push("/search");
+        this.props.history.push("/register");
         window.location.reload();
       },
       error => {

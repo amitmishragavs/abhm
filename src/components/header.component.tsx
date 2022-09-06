@@ -5,7 +5,7 @@ import authService from '../services/auth.service';
 import { useEffect, useState } from 'react';
 
 
-const HeaderComponent = ({ currentUser }: any) => {
+const HeaderComponent = ({ currentUser={} }: any) => {
     const [user, setUser] = useState<any>({})
 
     useEffect(() => {
