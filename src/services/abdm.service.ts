@@ -183,9 +183,19 @@ class ABDMService {
         });
     }
 
+    oldAadhaarOtpGenerate(data: any) {
+        const token = this.getUserToken()
+        return axios.post(API_URL + 'mobile/aadhaar/generateOTP', data, {
+            headers: {
+                'Authorization': `Bearer ${this.session.accessToken}`,
+                "X-TOKEN": `Bearer ${token}`
+            }
+        });
+    }
+
     updateAuthentication(data: any) {
         const token = this.getUserToken()
-        return axios.post(API_URL + 'mobile/old/generateOTP', data, {
+        return axios.post(API_URL + 'mobile/update/authentication', data, {
             headers: {
                 'Authorization': `Bearer ${this.session.accessToken}`,
                 "X-TOKEN": `Bearer ${token}`
@@ -197,6 +207,16 @@ class ABDMService {
     updateInitiate(data: any) {
         const token = this.getUserToken()
         return axios.post(API_URL + 'initiate/send', data, {
+            headers: {
+                'Authorization': `Bearer ${this.session.accessToken}`,
+                "X-TOKEN": `Bearer ${token}`
+            }
+        });
+    }
+
+    updateVerify(data: any) {
+        const token = this.getUserToken()
+        return axios.post(API_URL + 'verification/auth/verify', data, {
             headers: {
                 'Authorization': `Bearer ${this.session.accessToken}`,
                 "X-TOKEN": `Bearer ${token}`

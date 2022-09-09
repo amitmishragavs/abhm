@@ -60,13 +60,13 @@ class UpdateInitiate (AuthInit):
     emailAddress: str
 
 class HealthData(BaseModel):
-    email: str
-    firstName: str
+    # email: str
+    # firstName: str
     healthId: str
-    lastName: str
-    middleName: str
+    # lastName: str
+    # middleName: str
     password: str
-    txnId: str
+    # txnId: str
 
 class ForgetHealth(BaseModel):
     otp:str
@@ -78,6 +78,14 @@ class ForgetHealth(BaseModel):
 
 class AuthMethod(VerifyOtp):
     authMethod:str
+    
+class NewNumber(BaseModel):
+    newMobileNumber:str
+
+class EmailUpdate(BaseModel):
+    authMethod:str
+    encryptedOtp:str
+    txnId:str
 
 @app.post("/sessions")
 def read_root():
@@ -163,12 +171,19 @@ def read_root(item:UpdateInitiate,Authorization: Union[str, None] = Header(defau
     data = {"emailAddress": item.emailAddress,"authMethod": item.authMethod}
     return requests.post(endpoint, json=data, headers=headers).json()
 
+@app.post("/verification/auth/verify")
+def read_root(item:EmailUpdate,Authorization: Union[str, None] = Header(default=None),x_token: Union[str, None] = Header(default=None)):
+    endpoint = "https://healthidsbx.abdm.gov.in/api/v2/account/email/verification/auth/verify"
+    headers = {"Authorization":Authorization,"X-Token": x_token}
+    data = {"encryptedOtp": item.encryptedOtp,"authMethod": item.authMethod,"txnId":item.txnId}
+    return requests.post(endpoint, json=data, headers=headers).json()
+
 #Update Mobile number 
 @app.post("/mobile/new/generateOTP")
-def read_root(newMobileNumber,Authorization: Union[str, None] = Header(default=None),x_token: Union[str, None] = Header(default=None)):
+def read_root(item:NewNumber,Authorization: Union[str, None] = Header(default=None),x_token: Union[str, None] = Header(default=None)):
     endpoint = "https://healthidsbx.abdm.gov.in/api/v2/account/change/mobile/new/generateOTP"
     headers = {"Authorization":Authorization,"X-Token": x_token}
-    data = {"newMobileNumber":newMobileNumber}
+    data = {"newMobileNumber":item.newMobileNumber}
     return requests.post(endpoint, json=data, headers=headers).json()
 
 @app.post("/mobile/new/verifyOTP")
@@ -181,6 +196,13 @@ def read_root(item:VerifyOtp,Authorization: Union[str, None] = Header(default=No
 @app.post("/mobile/old/generateOTP")
 def read_root(txnId,Authorization: Union[str, None] = Header(default=None),x_token: Union[str, None] = Header(default=None)):
     endpoint = "https://healthidsbx.abdm.gov.in/api/v2/account/change/mobile/old/generateOTP"
+    headers = {"Authorization":Authorization,"X-Token": x_token}
+    data = { "txnId":txnId}
+    return requests.post(endpoint, json=data, headers=headers).json()
+
+@app.post("/mobile/aadhaar/generateOTP")
+def read_root(txnId,Authorization: Union[str, None] = Header(default=None),x_token: Union[str, None] = Header(default=None)):
+    endpoint = "https://healthidsbx.abdm.gov.in/api/v2/account/change/mobile/aadhaar/generateOTP"
     headers = {"Authorization":Authorization,"X-Token": x_token}
     data = { "txnId":txnId}
     return requests.post(endpoint, json=data, headers=headers).json()

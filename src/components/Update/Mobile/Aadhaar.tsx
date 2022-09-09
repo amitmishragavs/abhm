@@ -5,7 +5,7 @@ import abdmService from '../../../services/abdm.service';
 import { publicRsaEncrypt } from '../../../utils/encryption';
 
 function MAadhaar() {
-  const [inputs, handleChange, updateInputs]: any = useFormInput({ step: 0, authMethod: "MOBILE_OTP" });
+  const [inputs, handleChange, updateInputs]: any = useFormInput({ step: 0, authMethod: "AADHAAR_OTP" });
 
   const mobileNumberHandler = () => {
     const { newMobileNumber } = inputs;
@@ -23,7 +23,7 @@ function MAadhaar() {
     const encryptedOTP = publicRsaEncrypt(otp);
     abdmService.verifyNewMobileOtp({ otp: encryptedOTP, txnId }).then(res => {
       if (res.data) {
-        abdmService.oldMobileOtpGenerate({ txnId: res.data.txnId })
+        abdmService.oldAadhaarOtpGenerate({ txnId: res.data.txnId })
         updateInputs('txnId', res.data.txnId);
         updateInputs('step', 2);
       }

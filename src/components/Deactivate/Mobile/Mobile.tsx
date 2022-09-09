@@ -12,7 +12,7 @@ import { publicKey } from '../../../utils/publicKey';
 function DeactivateMobile() {
 
   const [inputs, handleChange, updateInputs]: any = useFormInput({ step: 0, authMethod: "MOBILE_OTP" });
-
+// console.log(inputs)
   const mobileNumberHandler = () => {
     abdmService.mobileGenerateOTP({}).then(res => {
       if (res.data) {
@@ -24,6 +24,7 @@ function DeactivateMobile() {
   const otpHandler = () => {
     const { otp, txnId, authMethod } = inputs;
     const encryptedOTP = publicRsaEncrypt(otp);
+    console.log(inputs,otp,encryptedOTP)
     abdmService.profileDeactivate({ otp: encryptedOTP, txnId, authMethod }).then(res => {
       if (res.data) {
 

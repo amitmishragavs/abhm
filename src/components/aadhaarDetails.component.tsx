@@ -120,6 +120,9 @@ export default class AadhaarDetails extends Component<Props, State> {
                   <Detail title="Mobile" onUpdate={() => this.setState({ modal: "mobile" })}>
                     {data.mobile}
                   </Detail>
+                  <Detail title="Health Number">
+                    {data.healthIdNumber}
+                  </Detail>
                   <Detail title="Health ID">
                     {data.healthId}
                   </Detail>
@@ -140,6 +143,9 @@ export default class AadhaarDetails extends Component<Props, State> {
                   </Detail>
                   <Detail title="State">
                     {data.stateName}
+                  </Detail>
+                  <Detail title="Full Address">
+                    {data.address}
                   </Detail>
                 </tbody>
               </table>

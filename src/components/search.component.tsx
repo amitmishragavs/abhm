@@ -204,7 +204,7 @@ export default class Search extends Component<Props, State> {
             {step === 0 ? <>
               <Button type="primary" onClick={() => this.props?.history?.push("/login_abha")}>Login ABHA</Button>
               <Button type="primary" onClick={() => this.setState({ step: 1 })}>Create ABHA with Aadhaar</Button>
-              <Button type="primary" onClick={() => this.setState({ step: 4 })}>Create ABHA with Number</Button>
+              <Button type="primary" onClick={() => this.setState({ step: 4 })}>Create ABHA with Mobile Number</Button>
             </> : null}
             {/* aadhaad registration */}
             {step === 1 ? <>
