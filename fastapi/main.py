@@ -66,7 +66,7 @@ class HealthData(BaseModel):
     # lastName: str
     # middleName: str
     password: str
-    # txnId: str
+    txnId: str
 
 class ForgetHealth(BaseModel):
     otp:str
@@ -127,8 +127,7 @@ def read_root(item:VerifyOtp,Authorization: Union[str, None] = Header(default=No
 @app.post("/createhealthidwithpreverified")
 def read_root(item:HealthData,Authorization: Union[str, None] = Header(default=None)):
     endpoint = "https://healthidsbx.abdm.gov.in/api/v1/registration/aadhaar/createHealthIdWithPreVerified"
-    data = {"email": item.email,"firstName": item.firstName, "healthId": item.healthId, "lastName": item.lastName,"middleName": item.middleName,
-    "password": item.password,"txnId":item.txnId}
+    data = {"healthId": item.healthId,"password": item.password,"txnId":item.txnId}
     headers = {"Authorization": Authorization}
     return requests.post(endpoint, json=data, headers=headers).json()
 

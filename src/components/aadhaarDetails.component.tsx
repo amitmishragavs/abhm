@@ -138,14 +138,14 @@ export default class AadhaarDetails extends Component<Props, State> {
               <table>
                 <tbody>
 
-                  <Detail title="District">
+                  {/* <Detail title="District">
                     {data.districtName}
+                  </Detail> */}
+                  <Detail title="Full Address">
+                    {data.address}
                   </Detail>
                   <Detail title="State">
                     {data.stateName}
-                  </Detail>
-                  <Detail title="Full Address">
-                    {data.address}
                   </Detail>
                 </tbody>
               </table>
